@@ -1,0 +1,35 @@
+Comparaison des rankings 
+https://www.youtube.com/watch?v=yGDv84wtDGs
+
+##Ajouter certaines ligne en couleur à "Country/ Year" 
+-Clic droit : Créer un combiné 
+-Ensuite créer un groupe dans le combiné : nom "Notable" 
+-Placer le groupe Year/ Country dans "Couleur" sous All 
+
+
+###Ajouter les libellés des "Country/Year" à côté des lignes 
+##Créer un libellé pour le groupe Notable 
+IF [Year/Country (group)]='Notable' THEN [Country]
+END
+##Créer un libellé pour un autre groupe
+IF [Year/Country (group)] !='Notable' THEN [Country]
+END
+##Les positionner dans "Etiquette" 
+
+
+###Ajouter les chiffres à côté des libellés "Country/Year" / Colonne Old System
+##Afficher les chiffres pour le groupe Notable 
+IF [Country & Year (combiné) (groupe)]='Notable' THEN [Old System] END
+##Afficher 
+IF [Country & Year (combiné) (groupe)]!='Notable' THEN [Old System]END
+##Les positionner dans "Etiquette". 
+
+####Faire de même pour la colonne New System 
+IF [Country & Year (combiné) (groupe)]='Notable' THEN [New System] END
+IF [Country & Year (combiné) (groupe)]!='Notable' THEN [New System]END
+
+
+
+
+
+

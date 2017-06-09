@@ -1,0 +1,33 @@
+Comparaison des performances d'une année à l'autre 
+
+#Etape 1 : définir les champs calculés année d'avant/ année d'après 
+
+##année d'avant : [Prior Year 1] 
+{MAX(YEAR([Order Date]))}-1
+
+##année d'après : [Latest Year 1]
+{MAX(YEAR([Order Date]))}
+
+
+#Etape 2 : définir les champs Ventes année d'avant/ Ventes années après 
+(Ventes ou un autre paramètre)
+
+##vente de l'année d'avant 
+IF YEAR([Order Date])=[Prior Year 1] THEN [Sales] ELSE 0 END
+
+##vente de l'année d'après 
+IF YEAR([Order Date])=[Latest Year 1] THEN[Sales] ElSE 0 END
+
+
+#Etape 3: créer le champ calculé % de changement 
+SUM([Latest Year 1])/SUM([Prior Year 1])-1
+
+#Etape 4: crée le champ calculé Alerte 
+IF[Change ]<=0 THEN 'x' ELSE ''END
+
+
+Ensuite construire le dashboard/ voir la vidéo 
+
+
+
+

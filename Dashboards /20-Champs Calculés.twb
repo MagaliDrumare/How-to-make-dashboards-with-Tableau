@@ -1,0 +1,813 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10000.16.0812.0001                               -->
+<workbook source-build='10.0.0 (10000.16.0812.0001)' source-platform='mac' version='10.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.0'>
+      <aliases enabled='yes' />
+      <column caption='Filtre Prédiction ' datatype='string' name='[Paramètre 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Point Forecast&quot;'>
+        <calculation class='tableau' formula='&quot;Point Forecast&quot;' />
+        <members>
+          <member value='&quot;Point Forecast&quot;' />
+          <member value='&quot;Hi 80&quot;' />
+          <member value='&quot;Lo 80&quot;' />
+          <member value='&quot;Lo 95&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Prédiction mai' inline='true' name='federated.12h4lrh14n33mw1342iva0nx8ke6' version='10.0'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Prédiction mai' name='excel-direct.0b6j6oh0l8xe4g15smmo80thyi8o'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/dark/Desktop/Tableau Learning/Réalisations/Excel référence /Prédiction mai .xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0b6j6oh0l8xe4g15smmo80thyi8o' name='2016' table='[&apos;2016$&apos;]' type='table'>
+          <columns gridOrigin='A1:H37:no:A1:H37:0' header='yes' outcome='2'>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='string' name='Marque' ordinal='1' />
+            <column datatype='real' name='Point Forecast' ordinal='2' />
+            <column datatype='real' name='Lo 80' ordinal='3' />
+            <column datatype='real' name='Hi 80' ordinal='4' />
+            <column datatype='real' name='Lo 95' ordinal='5' />
+            <column datatype='real' name='Hi 95' ordinal='6' />
+            <column datatype='integer' name='Réalisé' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Marque</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Marque]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Marque</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LFR_RFR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Point Forecast</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Point Forecast]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Point Forecast</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lo 80</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lo 80]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Lo 80</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hi 80</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Hi 80]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Hi 80</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lo 95</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lo 95]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Lo 95</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hi 95</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Hi 95]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Hi 95</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Réalisé</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Réalisé]</local-name>
+            <parent-name>[2016]</parent-name>
+            <remote-alias>Réalisé</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2016]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H37:no:A1:H37:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie 2):qk]&quot;' value='%' />
+        </aliases>
+      </column>
+      <column caption='F&amp;R' datatype='real' name='[Calculation_263812480002080768]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Point Forecast]+[Réalisé]' />
+      </column>
+      <column caption='Prédiction ' datatype='real' name='[Calculation_263812480003239938]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Paramètre 1]&#10;WHEN &apos;Hi 80&apos; Then [Hi 80]&#10;WHEN &apos;Lo 80&apos; Then [Lo 80]&#10;WHEN &apos;Lo 95&apos; Then [Lo 95]&#10;WHEN &apos;Point Forecast&apos; Then [Point Forecast]&#10;END' />
+      </column>
+      <column caption='Calcul 1' datatype='boolean' name='[Calculation_263812480169132037]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Différence  (copie 2)]&lt;5' />
+      </column>
+      <column datatype='real' name='[Différence  (copie 2)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ABS(([Différence  (copie)]))/([Réalisé])*100' />
+      </column>
+      <column caption='Différence ' datatype='real' name='[Différence  (copie)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Réalisé]-[Calculation_263812480003239938])' />
+      </column>
+      <column datatype='real' name='[Hi 80]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Hi 95]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Lo 80]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Lo 95]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Marque]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' name='[Point Forecast]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Réalisé]' role='measure' type='quantitative' />
+      <column-instance column='[Différence  (copie 2)]' derivation='Avg' name='[avg:Différence  (copie 2):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_263812480169132037]' derivation='None' name='[none:Calculation_263812480169132037:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Marque]' derivation='None' name='[none:Marque:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_263812480002080768]' derivation='Sum' name='[sum:Calculation_263812480002080768:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_263812480003239938]' derivation='Sum' name='[sum:Calculation_263812480003239938:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Différence  (copie 2)]' derivation='Sum' name='[sum:Différence  (copie 2):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Différence  (copie)]' derivation='Sum' name='[sum:Différence  (copie):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Hi 80]' derivation='Sum' name='[sum:Hi 80:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Hi 95]' derivation='Sum' name='[sum:Hi 95:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Lo 80]' derivation='Sum' name='[sum:Lo 80:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Lo 95]' derivation='Sum' name='[sum:Lo 95:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Point Forecast]' derivation='Sum' name='[sum:Point Forecast:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Réalisé]' derivation='Sum' name='[sum:Réalisé:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.354508' measure-ordering='alphabetic' measure-percentage='0.52459' parameter-percentage='0.120902' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Marque:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Citroen&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Peugeot&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DS&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Hi 80:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Réalisé:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Lo 80:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Calculation_263812480003239938:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie):qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Point Forecast:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Hi 95:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[avg:Différence  (copie 2):qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie 2):qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Lo 95:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Calculation_263812480002080768:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_263812480169132037:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>true</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>false</bucket>
+            </map>
+          </encoding>
+          <encoding attr='shape' field='[none:Calculation_263812480169132037:nk]' type='shape'>
+            <map to='asterisk'>
+              <bucket>true</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>false</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;France&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Filtre Prédiction ' datatype='string' name='[Paramètre 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Point Forecast&quot;'>
+          <calculation class='tableau' formula='&quot;Point Forecast&quot;' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Différence/ %'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Prédiction mai' name='federated.12h4lrh14n33mw1342iva0nx8ke6' />
+            <datasource caption='Paramètres' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Filtre Prédiction ' datatype='string' name='[Paramètre 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Point Forecast&quot;'>
+              <calculation class='tableau' formula='&quot;Point Forecast&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.12h4lrh14n33mw1342iva0nx8ke6'>
+            <column caption='Prédiction ' datatype='real' name='[Calculation_263812480003239938]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Paramètre 1]&#10;WHEN &apos;Hi 80&apos; Then [Hi 80]&#10;WHEN &apos;Lo 80&apos; Then [Lo 80]&#10;WHEN &apos;Lo 95&apos; Then [Lo 95]&#10;WHEN &apos;Point Forecast&apos; Then [Point Forecast]&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Différence  (copie 2)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ABS(([Différence  (copie)]))/([Réalisé])*100' />
+            </column>
+            <column caption='Différence ' datatype='real' name='[Différence  (copie)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([Réalisé]-[Calculation_263812480003239938])' />
+            </column>
+            <column datatype='real' name='[Hi 80]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Lo 80]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Lo 95]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Marque]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Point Forecast]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Réalisé]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Marque]' derivation='None' name='[none:Marque:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_263812480003239938]' derivation='Sum' name='[sum:Calculation_263812480003239938:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Différence  (copie 2)]' derivation='Sum' name='[sum:Différence  (copie 2):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Différence  (copie)]' derivation='Sum' name='[sum:Différence  (copie):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Hi 80]' derivation='Sum' name='[sum:Hi 80:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lo 80]' derivation='Sum' name='[sum:Lo 80:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lo 95]' derivation='Sum' name='[sum:Lo 95:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Point Forecast]' derivation='Sum' name='[sum:Point Forecast:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Réalisé]' derivation='Sum' name='[sum:Réalisé:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie 2):qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Réalisé:qk]&quot;</bucket>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Point Forecast:qk]&quot;</bucket>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Hi 80:qk]&quot;</bucket>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Lo 80:qk]&quot;</bucket>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Lo 95:qk]&quot;</bucket>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Calculation_263812480003239938:qk]&quot;</bucket>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie):qk]&quot;</bucket>
+              <bucket>&quot;[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Calculation_263812480005918723:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <filter class='categorical' column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[mn:Date:ok]'>
+            <groupfilter from='1' function='range' level='[mn:Date:ok]' to='7' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Marque:nk]'>
+            <groupfilter function='member' level='[none:Marque:nk]' member='&quot;DS&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.12h4lrh14n33mw1342iva0nx8ke6].[:Measure Names]</column>
+            <column>[federated.12h4lrh14n33mw1342iva0nx8ke6].[mn:Date:ok]</column>
+            <column>[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Marque:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.12h4lrh14n33mw1342iva0nx8ke6].[yr:Date:ok]' value='106' />
+            <format attr='text-format' field='[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie 2):qk]' value='n#,##0.00' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.12h4lrh14n33mw1342iva0nx8ke6].[yr:Date:ok]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.12h4lrh14n33mw1342iva0nx8ke6].[Multiple Values]' num-steps='12' palette='red_green_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie):qk]' />
+              <text column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.8342540264129639' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-transparency' value='167' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.12h4lrh14n33mw1342iva0nx8ke6].[mn:Date:ok]</rows>
+        <cols>([federated.12h4lrh14n33mw1342iva0nx8ke6].[:Measure Names] / [federated.12h4lrh14n33mw1342iva0nx8ke6].[yr:Date:ok])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Tendance '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>ECART &lt;5%</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Prédiction mai' name='federated.12h4lrh14n33mw1342iva0nx8ke6' />
+            <datasource caption='Paramètres' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Filtre Prédiction ' datatype='string' name='[Paramètre 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Point Forecast&quot;'>
+              <calculation class='tableau' formula='&quot;Point Forecast&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.12h4lrh14n33mw1342iva0nx8ke6'>
+            <column caption='Prédiction ' datatype='real' name='[Calculation_263812480003239938]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Paramètre 1]&#10;WHEN &apos;Hi 80&apos; Then [Hi 80]&#10;WHEN &apos;Lo 80&apos; Then [Lo 80]&#10;WHEN &apos;Lo 95&apos; Then [Lo 95]&#10;WHEN &apos;Point Forecast&apos; Then [Point Forecast]&#10;END' />
+            </column>
+            <column caption='Calcul 1' datatype='boolean' name='[Calculation_263812480169132037]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Différence  (copie 2)]&lt;5' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Différence  (copie 2)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ABS(([Différence  (copie)]))/([Réalisé])*100' />
+            </column>
+            <column caption='Différence ' datatype='real' name='[Différence  (copie)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([Réalisé]-[Calculation_263812480003239938])' />
+            </column>
+            <column datatype='real' name='[Hi 80]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Lo 80]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Lo 95]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Marque]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Point Forecast]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Réalisé]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_263812480169132037]' derivation='None' name='[none:Calculation_263812480169132037:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Marque]' derivation='None' name='[none:Marque:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[mn:Date:ok]'>
+            <groupfilter from='1' function='range' level='[mn:Date:ok]' to='7' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Marque:nk]'>
+            <groupfilter function='member' level='[none:Marque:nk]' member='&quot;Citroen&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Marque:nk]</column>
+            <column>[federated.12h4lrh14n33mw1342iva0nx8ke6].[mn:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.12h4lrh14n33mw1342iva0nx8ke6].[yr:Date:ok]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Calculation_263812480169132037:nk]' />
+              <shape column='[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Calculation_263812480169132037:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.12h4lrh14n33mw1342iva0nx8ke6].[mn:Date:ok]</rows>
+        <cols>[federated.12h4lrh14n33mw1342iva0nx8ke6].[yr:Date:ok]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Différence/ %'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+          <strip size='105'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card mode='radiolist' param='[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Marque:nk]' type='filter' />
+          </strip>
+          <strip size='260'>
+            <card mode='compact' param='[Parameters].[Paramètre 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.12h4lrh14n33mw1342iva0nx8ke6].[sum:Différence  (copie):qk]</field>
+            <field>[federated.12h4lrh14n33mw1342iva0nx8ke6].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='Tendance '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card mode='radiolist' param='[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Marque:nk]' type='filter' />
+            <card mode='compact' param='[Parameters].[Paramètre 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Calculation_263812480169132037:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.12h4lrh14n33mw1342iva0nx8ke6].[none:Calculation_263812480169132037:nk]</field>
+            <field>[federated.12h4lrh14n33mw1342iva0nx8ke6].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Différence/ %' width='192'>
+      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
+      QDI0GYBkaP8fY3aj9t2zjb4AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Tendance ' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwY
+      AAAS9ElEQVR4nO3daXAU553H8W93z6WRRqORxEgIybowFuIy2AZ8YeMT4zN27LgS21kfqUp2
+      N0mlNrV5tfsmW7WVpLJOquKkEpezyeZYr7PrAxtfGBtsMMbGBoMAGYRAICGBNNJIM9Kc3c++
+      IAl2GB0DQmq5/593qJ+p+qt4furn6Z7+t6aUUgjhUPp0FyDEdJIACEdzffofkUgEWREJJ9Fk
+      DyCcTJZAwtEkAMLRJADC0SQAwtFc4w8RYnRKKVQySfrQIcyBKEZ5GZ6GBjSPB03Tpru8cclV
+      IHHWsv0DxNavJ9PZhaexASMUwuzrI334MJ7GuQTW3oIRKJruMsckARD5U4pMVxfRPz5N0U03
+      4lu4AM11ejGh0mlGPtrJyNZ3CT30AK7ycrDp2UACIPJmxmJEnvgFoYe/iruiYtRxqUOHGHru
+      ecq//S00t3sKK5w42QSLvMVfe52ia6/BFQ6POc7T0IBv8WLimzZNTWFnIWcATDNDOmuO+UFl
+      mWQy2fNSlLAvK5UidfAgBZcsG3eTq2kahdesIvHBDlQmM0UV5ifnVaATR9s4MlxItS+B6S2h
+      ssRLd28ElzeA3+siGPAR6TnM4ahB0+wA3QMZGmvKicWH0bwByoL+qf49xBTJ9vTgCocnvKTR
+      vV70wkLMoSFcZWXnubr85QyAPhLnRE+cgUQHH+/eyzVL5/N+n8HIyZOUBr0snz+HnniSYauY
+      99Y/j0vPcnzlStat28jXv/UdCcDnmJVIoBcU5PUZzeNBpe15Bsi5BFLKZCjazZ6D3WSzWdJp
+      k2WXryJU4KE57GX95o9pmluNaabpPtlPZV09ppll7X0P0Fw39rpQzGy6rwArmczrMyqdse0m
+      +IwzgFKKkydPEiqvIuxJowqbuaixBhUsovSalcyrKWWk7Dg1VfVkjUqWzgnQ0h6h+aJmNLe9
+      r/mKc+eqrCB74gQqM7FJbaXTWMNxjGDxFFSXvzMugyqlaN23h+qGJgIFnumqS9hY9Jk/4amv
+      o+DSS8fcCCuliL/5JmSyBNbcPHUF5uGMJZCmacxfsFgmvxhVYM3NxDe+hdnbO+a4zJEjJD/a
+      SdH1101RZfmTG2Eif0qRPnaMwaefIbD2Frzzm9AM4/ThTIbEx7sZ3rSZkge/gjscljvB4vMn
+      G4kwtO5FzN4+PHMbMUIhsn19pNvbcdfUUHzbbRjFgekuc0wSAHFOlFJY8TjptkOY0ShGWRne
+      xgY0v1++DSqE3cl3gYSjSQCEo0kAhKNJAISjSQCEo0kAhKNJAISjSQCEo0kAhKNJAISjSQCE
+      o0kAxKQZGOmfcS9YkQCISfPzLT8ha82sVjkSADFpFDPrrz9IAMRZMK3shJc6SilMa+wma9NJ
+      AiDytuGTV3hm5+8ZSg6OOa5vuJffffAU245smaLK8jdqANKpJKalMLMZMjnaJCrLmoEnPDEZ
+      rrvwZqpDtTzxzuO83voyiUziM8fjqRjrWp7lqW2/YMHsxaysu3KaKh1fzifC0oNd/PJ367n/
+      oa9yYOdW6pespKrks93e9u3aSt2iK/Ebf/tp4RTxVIy3Dm5g9/FdrJl/Gy/vW8dVDdew9fDb
+      rKi9gqsbrsXnzq+L3FTLEQDFhxue4XevH+DqSxpo7+xmzuxZFFZfTKpjNwUlhRxs76QsUMSV
+      1y7n+T+9SrCqnkDyKPsjLv75e9+kUBZWjqGUYjAZ5TfvP8kHHdu4bt5N3L/0QfyewhnxTHCO
+      qarRtHAhKy5bRd+RNgLBYoqCtRzb9Rb9FKGlstzzlYcpMJJ0He0grrvJKIuM7uFrX39MJr+D
+      KKVIZEbY3PYmqUySssJyuoeOs/Xw26TN1Iy4J5BzuhreYqqqy1l98zV43F4qqmdTW+Lj4uWX
+      UVFVTzjoZ84FDTTNX0JNiZ+qWWHq5l5ISaF3qusX0yRrZnn70Js8vukHFHoK+c613yMcqORb
+      q75LKpvix2/9OzuObbf1FSCYQFcIpdSppkZ/Hva3pzU1ys/F59cnJ/fzwp7/pbH8Qm686BaK
+      fUEA/u31f+F71/8rLt3FQKKf9Xufp3f4JPcu+TI1odpprjq3cd8S+deJPcoEl4nvPFkry4OX
+      PkJlcVXO/39N0yj1l/HApY9wLNpBMptfN+mpJK9JFXlbULloQuM0TeOCUN35LeYcyZZVOJoE
+      QEyapnAz+gxbEktrROFocgYQjiYBEI4mARCOJgEQjiYBEI4mARCOJgEQjiYBEI4mARCOJgEQ
+      jiYBEI4mARCOJgEQk+bnWx4na0prROFQ/SP9M649ogRAOJoEQOTtnUNvsef4LixljTkua2XZ
+      cfQ9dhzdPkWV5U8CIPI2v2IB2zve5Yl3Hqc90nbGcaUU+0/s5aebf8j+E/uYF54/DVVOjDwU
+      L/JWXhTmkZVfpz3Sxostz1FSEGJt8x0AHB/s5LXW9ZiWyX1LH6A6WGPrziE5H4nsPtTCcy9t
+      wnS5SKc1vnD71bz6+iaaLrkc12APHT19BPwFDKQsvnTvPfg90iDUqSzL5KPOHbxx4FXa+9qY
+      O2sea5vvZEHlIltP/L/IuQSKRLq58PKr8RW4WTEvyMFDJygo8vHeBzto2fUhy1ffxOBgBJfb
+      izbDdv1ikmkafk8huqZjqixuw0OBzRviflru1oi6ToHHjdfrx+Px0XloL9GRNOgGgXANdZVB
+      yksKObp/D/HEzLruKyaHUoruoeM8+e4TbG7byP3LHqK+tJE1Tbfy0t7n+O37T9I/HLF9f9AJ
+      dYVQSmGaFi7X6aWOsixMBS5D9tFOEx0Z4JXWF+mMHuXW5rtorlwInG6NaOgGu7o+5PXW9VwU
+      buami9ZS6C2a5qpzm9AmWNO0z0x+AE3XZQftUDu7dlAXqueeJffjMTxnHNc1nWXVl9FcsZBt
+      R7bQ0rObFbVXTEOl45M5LPK2+sIbJzTO5y6Y8NjpIusX4WgSADFpfC4v9r/w+VnSGlE4mpwB
+      hKNJAISjSQCEo0kAhKNJAISjSQCEo0kAhKNJAISjSQCEo0kAhKNJAISjSQCEo0kAxKR5ed86
+      TMuc7jLyIgEQk+ajzg/GbZZlNxIA4WgSAJG39r62CXV8UEpxMtbD0YEjU1PYWZAAiLzFUkP8
+      fOtPeK31JdLZdM4xicwIz+7+H5567xekzdxj7CDvh+Ijfd1kdD/xwQhz6xvOR03C5hZXLaW5
+      chEbPnmFH735fa6bdzOX1qwAIJVNsqV9E1vaN7OqcTV3Xv9FDM2+nQNzPhKZiEXYvHkrdc1L
+      IZ2iJuynvTuGlRlheCjGrLpaNr+9jcceuH86ahY2oZQimhjglf0v0jN0nGPRDsJFFTRVLOCG
+      eWso8gZs3x4x5xngWOtOdu7ew/bdx6irdLPNhKqaCtojiiW+FPE51cjqSWiaRrEvSF1pAx39
+      h0mkR9A0jdrSegq9Rbaf/DDKLFbKIBgMUVoaYPniRjoTXuorS1mxcjnV1RX4vB5KgsVTXauw
+      Ecsy2dezh59s/gEdA4f5xlXfpjpUy0OXfY3dXTv52ds/pj3SZvvLoqN0hVCYpsIwdJRSKAW6
+      bv80i6nRM9TNs7ufRtcMbm2+k5pQLXC6NaJLd9EeOchLe5+nyBvgniX3U1IQmuaqcxtlE6xh
+      GKcmvKZpzIAzmZhC7ZE2rp+3hnmzmnIuczRNo7F8Ht9c9V1auj+mPdLGsurLpqHS8UlrRJG3
+      K+qvntA4XdNZXLX0PFdzbmQnKxxNAiAmTbioYkZc+fk0aY0oHE3OAMLRJADC0SQAwtEkAMLR
+      JADC0SQAwtEkAMLRJADC0SQAwtEkAMLRJADC0SQAwtHkeQBxTqxkisRHH5Hatw8zGsUoK8O3
+      cCEFFy9Bc7unu7xxybdBxVlRSpH48EPib2zEt3AhvkULMUIhsn19JHd9TOrgQYpvvx3v/NxP
+      jdmFBEDkTSnFyJatJPfvp+RL92EEg2ccN/v7if7hvym8+kp8F19s2xDIHkDkLdNxlJEdOyh9
+      +O/OmPxw6plgV1kZpY8+TOy11zEHBqahyonJOwDKssbtCSk+v5RSxF55leBdd427xtcLCym+
+      /TZiL6237ZzJOwD7drxP2rR3rxdx/liDQ1jDw7jraic03tvcTKazC5VInOfKzk7Oq0CHdr3D
+      H194h+F0Ehcu7rvvdja+uZHy+kWEklEuWHIpXrl+5EjZSB+u8KwJr+k1TUMvLsaKx9H9/vNc
+      Xf5yTuNEOslVt93B4ZYdNIf97N97EH9pOZ2dnXjcJtjzbCamQjYLRn7NbjVdQ1n2XDXkDEBx
+      sAzlKiIz5wKCJR5Ksn1Ee+PMrqqkstD116ZZwnn04mKswcG8PmONJNB9BeeponOTMwAXXLQM
+      gEWNdQA0/XkDY9dLWWLquMJhzFgcc2gIo3j8/rDZSAR0Db04MAXV5W9Cm+BT7RFl8gvQDIPC
+      K68gvuGN8d8QY1kMvbCOwM03oen2vOJuz6qErflXriDbF2Fk+/ZR1/bKsoi/8Qaa14u3uXmK
+      K5w4uRMszoqVSBD9wx/RfD4Ct6w5dUPMMMA0yfb1EXtp/an7AHd/Ad3rne5yRyUBEGdNWRbJ
+      j3cT37QJTBN0HUwTzeej6IYb8DZdZPulswRAnDNlWahEApXNorndaD6fbdf8f0sCIBxtZsRU
+      iPNEAiAcTQIgHE0CIBxNAiAcTQIgHE0CIBxNAiAcTQIgHE0CIBxNAiAcTQIgJs17R7ZgWeZ0
+      l5EXCYCYNG8ceA1T2fPh99FIAISjSQBE3iLDfWTMzPjPBCtFOptiYKR/iirLnwRA5K2lezc/
+      3Ph9Pjz2Plkrm3NMOptmS/smfrjx+xzpb5/iCicuZ1uUkz0d9CQLWFwXBmD4RBsnEiEa6sqm
+      tDhhT6saV7Ng9iJe3vsCW9o3cfvCu6kvawTAUiZ7e1p5ed8L1JU28I+r/omgr2SaKx5dzifC
+      Bo620dqbRGVMgsYIbr+XGKUc2L6BvpEEDzz2DUI++7/8QJxfSimODhxhXcv/4XMX0NZ7gKrg
+      HArcfu5YeA8VgUrbPxOccwmUHOqjvaOLA4c66Go/RO/Jo3Qdj9KXcbPgghAd/SNTXaewIU3T
+      qC2t57HL/x4NjWPRDmYXz+Gry79GZfFs209+GCUAGqC53HQc/Ii3dn2CoRtoLg2v14vf7cY1
+      A34xcf4ppdjX08JPN/+IoC9IfWkj8VSMn73zH7RH2mzbEv3TztgDKKXY1XqA+RffwH1rV2EY
+      xqeSvGSKyxN2dHrp8ywel4dHV36DWUVhPult5cHLHuVErIdndz9NgdvPrc13Mbu4yrZng5yb
+      4OvvvB+Xy23bosX02njgNfZ07+K2BV+gsWwuuv7ZbtHVJTX8w1XfYW9PC7/f8WuunXsDy2sv
+      n6Zqx3ZGADRNw+32TEctYoZYUXsFqy+8EUMfvU26obtYXHUxzRULSWbt+XIMkNekirMQ8I3f
+      FfovXIaLIsOenaFBboQJh5MAiElz16J7x1wW2ZG0RhSOJmcA4WgSAOFoEgDhaBIA4WgSAOFo
+      EgDhaBIA4WgSAOFoEgDhaBIA4WgSAOFo8nVocc5UNovZ34+VTKL7/RihEJoxM74UJwEQZ01l
+      Mgxv28bI1nfRiwLoBT6s4RGsZJKi1ddQsGwZmsveU0y+DSrOijk0xMBvfou7tpbATTeiFxSc
+      PhaLEXv5ZcyhGKGvfBnd75/GSscmARB5s1Ip+n/5K4quvw5vc3POZ8eVUoxs305qTwuhRx9B
+      0+253bRnVcLWRrZsxdPYOOrkh1PPlvuXL0fz+0nu2jXFFU5czgDEY/1098f/+u90rI9If5xj
+      HZ10H21jJHO6B3wqkcCUk4hjqGyWkfc/oOi61eN2DdF0neI7bie2YSPKtOd7A3LuUJLRfrqG
+      dFLxQXxaBjMVo1+VcWD7VryuIRbfWE77h+9S1bSUN5/9L6qX3cDaq5ehSxuVz73siRMYpaHP
+      rPnHYgQCaG4X1tAQRih0nqvLX84AZKJ9tB6Ikh5JM8c9RFG4iD7l+XPLOJ2WbRv4+GAv2Q/2
+      MafUIBwOI1PfGcxYHCOQX5cH3VeAlUphxwujufcAGuiGzuBAD22dPWjaqZ+dOqTh8nhwF/hZ
+      vmI5s0pKGU6np65iMa00jxsrz/9vZWZte18gZ2vEva37mVWzkiUN5WSNQurnlJPW/KhkCF23
+      8BeXUBnehzdYQdUlTbR2RlAgZwEHcM2aRfbkSZRSE+ocqCwLayiGnudZY6qccRlUKcVgNEog
+      WIKhy5QWn6WUYuA/f4P/isvxNTWNO35kxw7S7YcJ3vtFW7baPGMJpGkaJaGQTH6Rk6ZpBG5Z
+      Q+zF9ViJsVseZgcGiG/YSOCWNbac/CD3AcRZcFdWUnT9dfT/6kmyvb1nHFdKkenqYuCpXxO8
+      +y6MoqJpqHJi5E6wOCtKKdIHDzK07iVcsyvxLWjGCIXI9vaRbNmLGR0geM/duKurbfvXHyQA
+      4hypTIbUgQOkWj/BjEYxysrwNc/H09Bg+y/CgQRAOJzsAYSjSQCEo0kAhKNJAISj/T+Rw8vO
+      FVpPIgAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
