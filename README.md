@@ -9,14 +9,14 @@
 ## How to acces to the Tableau web connectors? 
 * https://data.theinformationlab.co.uk/alteryx.html
 
-## How to learn Data Viz : 
+## How to learn Data Viz ? 
 * Andy Kirk website : http://www.visualisingdata.com
-* Udemy Colors for Data Science A-Z: https://www.udemy.com/colordata/learn/v4/overview
+* Udemy "Colors for Data Science A-Z": https://www.udemy.com/colordata/learn/v4/overview
 * "Show me the numbers" by Stephen Few : https://www.amazon.com/Show-Me-Numbers-Designing-Enlighten/dp/0970601999
 * "The big Book of dashboards" by Steve Wexler: https://www.amazon.com/Big-Book-Dashboards-Visualizing-Real-World/dp/1119282713
 * "Storytelling with Data: A Data Visualization Guide for Business Professionals" by Cole Nussbaumer Knaflic: https://www.amazon.com/Storytelling-Data-Visualization-Business-Professionals/dp/11190022
 
-## How to prepare the data (data preparation)
+## How to prepare the data (data preparation) ?
 * White book on data preparation : http://datapreparation.fr
 
 
