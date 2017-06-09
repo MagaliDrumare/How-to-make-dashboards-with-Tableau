@@ -9,6 +9,10 @@
 ## How to acces to the Tableau web connectors? 
 * https://data.theinformationlab.co.uk/alteryx.html
 
+## How to generate Tableau Dashboard in five minutes? 
+* Linpack for Tableau :https://linpack-for-tableau.com
+* Démo Linpack : https://vimeo.com/220019383
+
 ## How to learn Data Viz ? 
 * Andy Kirk website : http://www.visualisingdata.com
 * Udemy "Colors for Data Science A-Z": https://www.udemy.com/colordata/learn/v4/overview
